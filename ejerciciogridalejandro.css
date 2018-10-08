@@ -1,0 +1,61 @@
+/* Estilos */
+.wrapper {
+    display: grid;
+    grid-template-columns: 20% auto 160px;
+    grid-auto-rows: minmax(120px,auto);
+    grid-gap: 1em;
+    margin: auto;
+    max-width: 1140px;
+    min-height: 120px;
+
+/*Cajas*/
+}
+.box1 {
+  background-color: #FFAF87;
+  grid-column: 1/4;
+  grid-area: box1
+}
+.box2 {
+  background-color: #FFF687;
+  grid-row: 2/4;
+  grid-area: box2
+}
+.box3 {
+  background-color: #81FD75;
+  grid-row: 2/4;
+  grid-area: box3
+}
+.box4 {
+  background-color: #75BBFD;
+  grid-row: 2/4;
+  grid-area: box4
+}
+.box5 {
+  background-color: #CE66FE;
+  grid-row: 1/4;
+  grid-area: box5
+}
+
+
+@media (min-width: 700px){
+.wrapper{
+grid-template-areas:
+"box1 box1 box1"
+"box2 box3 box4"
+"box2 box3 box4"
+"box5 box5 box5";
+}
+}
+
+
+@media (max-width: 700px){
+.wrapper{
+grid-template-rows: repeat(5, 120px);
+grid-template-areas:
+"box1 box1 box1"
+"box2 box2 box2"
+"box3 box3 box3"
+"box4 box4 box4"
+"box5 box5 box5";
+}
+}
